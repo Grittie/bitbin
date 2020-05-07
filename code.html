@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title> Project TRAL </title>
+    <link rel="stylesheet" type="text/css" href="data/css/codestyle.css">
+    <link rel="shortcut icon" href="data/img/logo.png">
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="data/img/logo.png" alt="">
+    </div>
+    <!--  Sidebar menu. hrefs that take you to different pages of the website. For example, homepage has href to index.html, so if you press homepage on the sidebar on the website you will be sent to index.html. -->
+    <div id="mySidebar" class="sidebar">
+        <!-- Sidebar for the menu -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+        <!-- The exit button on the menu and connection to the javascript section -->
+        <a href="index.html">Homepage</a>
+        <!-- Connection to the Homepage -->
+        <a href="code.html">New_Code</a>
+        <!-- Connection to new code -->
+        <a href="retrieve.php">Input_Link</a>
+        <!-- Connection to input link -->
+        <a href="howto.html">HowTo</a>
+        <!-- Connection to the how to page -->
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">Menu</button>
+    </div>
+    <!-- Javascript to change the style of different elements like "mySidebar" and "main" -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            // Javascript section for opening the menu
+        }
+    
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            // Javascript section for closing the menu
+        }
+    </script>
+    <!-- Here you have to enter your code, it will grab syntax.php and then post it. -->
+    <h1> Enter code here: </h1>
+
+    <form action="syntax.php" method="post">
+        <br>
+        <textarea name="code" id="code" rows="40" cols="100" placeholder="enter code here."> </textarea>
+        <br>
+    <!-- Here is the menu to select the desired language, it is a dropdown with options. As a result, it immediately applies the correct highlighting. -->
+        <label class="select" for="languages">Choose a language:</label>
+
+        <select class="select" name="language" id="languages">
+            <option name="php" value="php">PHP</option>
+            <option name="html" value="html5">HTML</option>
+            <option name="css" value="css">CSS</option>
+            <option name="sql" value="sql">SQL</option>
+            <option name="javascript" value="javascript">JavaScript</option>
+        </select>
+
+        <input class="select" type="submit">
+    </form>
+
+
+</body>
+
+</html>

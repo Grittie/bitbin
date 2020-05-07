@@ -1,0 +1,98 @@
+img {
+    max-width: 165px;
+    max-height: 165px;
+    /* Logo styling and position */
+}
+
+body {
+    margin: 0;
+    background: url("../img/giphy.gif"); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #57be8e9a;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+ 
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 20px;}
+    .sidebar a {font-size: 18px;}
+}
+
+h1 {
+    display: flex;
+    position: absolute;
+    color: white;
+    top: 9%;
+    right: 59%;
+}
+
+#hash {
+    background-color: #D3D3D3;
+    margin-top: 7.5%;
+    margin-left: 20%;
+    height: 25%;
+    width: 25%;
+}
+
+label {
+    margin-top: 7.5%;
+    margin-left: 25%;
+}
+
+img {
+    position: absolute;
+    width: 10%;
+}
